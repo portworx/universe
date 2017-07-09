@@ -1,0 +1,5 @@
+{
+  "pip": [
+    "https://disrani-dcos.s3.amazonaws.com/cassandra/assets/test-version/bin_wrapper-0.0.1-py2.py3-none-any.whl"
+  ]
+}
