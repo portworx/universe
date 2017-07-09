@@ -362,8 +362,8 @@ def enumerate_docker_images(package_path):
 @contextlib.contextmanager
 def run_docker_registry(volume_path):
     print('Start docker registry.')
-    command = ['docker', 'run', '-d', '-p', '5000:5000', '--name',
-               'registry', '-v', '{}:/var/lib/registry'.format(volume_path),
+    command = ['docker', 'run', '-d', '-p', '5001:5000', '--name',
+               'dcos_registry', '-v', '{}:/var/lib/registry'.format(volume_path),
                'registry:2.4.1']
 
     subprocess.check_call(command)
@@ -372,7 +372,7 @@ def run_docker_registry(volume_path):
         yield
     finally:
         print('Stopping docker registry.')
-        command = ['docker', 'rm', '-f', 'registry']
+        command = ['docker', 'rm', '-f', 'dcos_registry']
         subprocess.call(command)
 
 
@@ -394,11 +394,11 @@ def format_image_name(host, name):
 def upload_docker_image(name):
     print('Pushing docker image: {}'.format(name))
     command = ['docker', 'tag', name,
-               format_image_name('localhost:5000', name)]
+               format_image_name('localhost:5001', name)]
 
     subprocess.check_call(command)
 
-    command = ['docker', 'push', format_image_name('localhost:5000', name)]
+    command = ['docker', 'push', format_image_name('localhost:5001', name)]
 
     subprocess.check_call(command)
 
