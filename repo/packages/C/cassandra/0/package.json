@@ -1,0 +1,16 @@
+{
+  "description": "Cassandra using the DC/OS SDK backed by Portworx volumes",
+  "framework": true,
+  "maintainer": "support@mesosphere.io",
+  "minDcosReleaseVersion": "1.8",
+  "name": "cassandra-px",
+  "packagingVersion": "3.0",
+  "postInstallNotes": "DC/OS cassandra is being installed!\n\n\tDocumentation: https://docs.mesosphere.com/latest/usage/service-guides/cassandra\n\tIssues: https://docs.mesosphere.com/support/",
+  "postUninstallNotes": "DC/OS cassandra has been uninstalled.",
+  "preInstallNotes": "This DC/OS Service is currently in preview.",
+  "selected": true,
+  "tags": [
+    "cassandra"
+  ],
+  "version": "test-version"
+}
