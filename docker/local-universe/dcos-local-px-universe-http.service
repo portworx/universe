@@ -1,5 +1,5 @@
 [Unit]
-Description=DCOS: Serve the local universe (HTTP)
+Description=DCOS: Serve the local PX universe (HTTP)
 After=docker.service
 
 [Service]
@@ -10,7 +10,7 @@ TimeoutStartSec=120
 TimeoutStopSec=15
 ExecStartPre=-/usr/bin/docker kill %n
 ExecStartPre=-/usr/bin/docker rm %n
-ExecStart=/usr/bin/docker run --rm --name %n -p 8082:80 mesosphere/universe nginx -g "daemon off;"
+ExecStart=/usr/bin/docker run --rm --name %n -p 8082:80 portworx/universe nginx -g "daemon off;"
 
 [Install]
 WantedBy=multi-user.target
