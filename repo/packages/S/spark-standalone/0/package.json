@@ -1,0 +1,16 @@
+{
+  "description": "An Apache Spark Standalone implementation using the DC/OS SDK",
+  "framework": true,
+  "maintainer": "support@mesosphere.io",
+  "minDcosReleaseVersion": "1.8",
+  "name": "spark-standalone-px",
+  "packagingVersion": "3.0",
+  "postInstallNotes": "Apache Spark Standalone is being installed!\n\n\tDocumentation: https://docs.mesosphere.com/latest/usage/service-guides/spark\n\tIssues: https://docs.mesosphere.com/support/",
+  "postUninstallNotes": "Apache Spark Standalone has been uninstalled.",
+  "preInstallNotes": "This DC/OS Service is currently in preview.",
+  "selected": true,
+  "tags": [
+    "spark"
+  ],
+  "version": "b9f6d3b-2.1.0"
+}
