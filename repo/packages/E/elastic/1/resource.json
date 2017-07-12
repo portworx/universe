@@ -1,0 +1,50 @@
+{
+  "assets": {
+    "uris": {
+      "jre-tar-gz": "https://downloads.mesosphere.com/java/jre-8u121-linux-x64.tar.gz",
+      "libmesos-bundle-tar-gz": "https://downloads.mesosphere.com/libmesos-bundle/libmesos-bundle-1.9.0-rc2-1.2.0-rc2-1.tar.gz",
+      "executor-zip": "https://px-dcos.s3.amazonaws.com/elastic/assets/b9f6d3b-5.3.0/executor.zip",
+      "bootstrap-zip": "https://px-dcos.s3.amazonaws.com/elastic/assets/b9f6d3b-5.3.0/bootstrap.zip",
+      "scheduler-zip": "https://px-dcos.s3.amazonaws.com/elastic/assets/b9f6d3b-5.3.0/elastic-scheduler.zip",
+      "elastic-tar-gz": "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.3.0.tar.gz",
+      "kibana-tar-gz": "https://artifacts.elastic.co/downloads/kibana/kibana-5.3.0-linux-x86_64.tar.gz",
+      "xpack-zip": "https://artifacts.elastic.co/downloads/packs/x-pack/x-pack-5.3.0.zip",
+      "support-diags-zip":"https://github.com/elastic/elasticsearch-support-diagnostics/releases/download/5.9/support-diagnostics-5.9-dist.zip"
+    },
+    "container": {
+      "docker": {
+        "proxylite": "mesosphere/proxylite:1.0.1"
+      }
+    }
+  },
+  "images": {
+    "icon-small": "https://downloads.mesosphere.com/universe/assets/elasticsearch-small.png",
+    "icon-medium": "https://downloads.mesosphere.com/universe/assets/elasticsearch-medium.png",
+    "icon-large": "https://downloads.mesosphere.com/universe/assets/elasticsearch-large.png"
+  },
+  "cli":{
+    "binaries":{
+      "darwin":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"eecd2aafcd0b11d20d6d0f4f7e8dab5320549d14ad04d06c57a513d01a30ebb1" } ],
+          "kind":"executable",
+          "url":"https://px-dcos.s3.amazonaws.com/elastic/assets/b9f6d3b-5.3.0/dcos-elastic-darwin"
+        }
+      },
+      "linux":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"d04b510de470bbba03181106d017cbef6b1a7efc7c75c6ee7f85d2ee3d078736" } ],
+          "kind":"executable",
+          "url":"https://px-dcos.s3.amazonaws.com/elastic/assets/b9f6d3b-5.3.0/dcos-elastic-linux"
+        }
+      },
+      "windows":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"5225159763aa42aa2c4f893abbe58fe60ed0ad57aebf66e99e156a324924fb1c" } ],
+          "kind":"executable",
+          "url":"https://px-dcos.s3.amazonaws.com/elastic/assets/b9f6d3b-5.3.0/dcos-elastic.exe"
+        }
+      }
+    }
+  }
+}
