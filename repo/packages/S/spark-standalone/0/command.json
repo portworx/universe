@@ -1,0 +1,5 @@
+{
+  "pip": [
+    "https://px-dcos.s3.amazonaws.com/spark-standalone/assets/b9f6d3b-2.1.0/bin_wrapper-0.0.1-py2.py3-none-any.whl"
+  ]
+}
