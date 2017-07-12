@@ -1,0 +1,58 @@
+{
+  "assets": {
+    "uris": {
+      "jre-tar-gz": "https://downloads.mesosphere.com/java/jre-8u121-linux-x64.tar.gz",
+      "libmesos-bundle-tar-gz": "https://downloads.mesosphere.com/libmesos-bundle/libmesos-bundle-1.9.0-rc2-1.2.0-rc2-1.tar.gz",
+      "cassandra-tar-gz": "https://downloads.mesosphere.com/cassandra/assets/apache-cassandra-3.0.10-bin-dcos.tar.gz",
+      "scheduler-zip": "https://px-dcos.s3.amazonaws.com/cassandra/assets/b9f6d3b-3.0.10/cassandra-scheduler.zip",
+      "bootstrap-zip": "https://px-dcos.s3.amazonaws.com/cassandra/assets/b9f6d3b-3.0.10/bootstrap.zip",
+      "executor-zip": "https://px-dcos.s3.amazonaws.com/cassandra/assets/b9f6d3b-3.0.10/executor.zip",
+      "s3cli-zip": "https://downloads.mesosphere.com/dcos-commons/artifacts/s3cli-0.0.55-linux-amd64.zip"
+    }
+  },
+  "images": {
+    "icon-small": "https://downloads.mesosphere.com/cassandra-mesos/assets/cassandra-small.png",
+    "icon-medium": "https://downloads.mesosphere.com/cassandra-mesos/assets/cassandra-medium.png",
+    "icon-large": "https://downloads.mesosphere.com/cassandra-mesos/assets/cassandra-large.png"
+  },
+  "cli": {
+    "binaries": {
+      "darwin": {
+        "x86-64": {
+          "contentHash": [
+            {
+              "algo": "sha256",
+              "value": "f8bca9ce0ddde4a4910d60b0233f0b14ffe7e7919b004ca372be4779e32cc19b"
+            }
+          ],
+          "kind": "executable",
+          "url": "https://px-dcos.s3.amazonaws.com/cassandra/assets/b9f6d3b-3.0.10/dcos-cassandra-darwin"
+        }
+      },
+      "linux": {
+        "x86-64": {
+          "contentHash": [
+            {
+              "algo": "sha256",
+              "value": "609bf15e2b7ff4cb3acccccc650659d4ccde51f4ab56d4dbe761d8b0e4ab857b"
+            }
+          ],
+          "kind": "executable",
+          "url": "https://px-dcos.s3.amazonaws.com/cassandra/assets/b9f6d3b-3.0.10/dcos-cassandra-linux"
+        }
+      },
+      "windows": {
+        "x86-64": {
+          "contentHash": [
+            {
+              "algo": "sha256",
+              "value": "d81f08f0c4f4eb65fd3dd8180eea018bab1c427ec48603b03541cd07e5aa7a42"
+            }
+          ],
+          "kind": "executable",
+          "url": "https://px-dcos.s3.amazonaws.com/cassandra/assets/b9f6d3b-3.0.10/dcos-cassandra.exe"
+        }
+      }
+    }
+  }
+}
