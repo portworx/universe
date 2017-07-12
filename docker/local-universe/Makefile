@@ -42,7 +42,7 @@ gen-universe: clean
 endif
 
 local-universe: gen-universe clean
-	docker save -o local-universe.tar mesosphere/universe:latest
+	docker save -o local-universe.tar portworx/universe:latest
 	gzip local-universe.tar
 
 old-local-universe: clean
@@ -50,5 +50,5 @@ old-local-universe: clean
 		--repository $(REPO_BASE_DIR)/repo/packages/ \
 		--selected \
 		--dcos_version "$(DCOS_VERSION)"
-	docker save -o local-universe.tar mesosphere/universe:latest
+	docker save -o local-universe.tar portworx/universe:latest
 	gzip local-universe.tar
