@@ -1,0 +1,5 @@
+{
+  "pip": [
+    "https://px-dcos.s3.amazonaws.com/portworx/assets/e418517-1.2.8/bin_wrapper-0.0.1-py2.py3-none-any.whl"
+  ]
+}
