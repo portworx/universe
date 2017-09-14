@@ -1,0 +1,5 @@
+{
+  "pip": [
+    "https://px-dcos.s3.amazonaws.com/confluent-kafka/assets/c470a7f-3.3.0/bin_wrapper-0.0.1-py2.py3-none-any.whl"
+  ]
+}
