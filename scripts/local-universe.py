@@ -17,8 +17,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-HTTP_ROOT = "http://master.mesos:8082/"
-DOCKER_ROOT = "master.mesos:5000"
+HTTP_ROOT = "http://master.mesos:8083/"
+DOCKER_ROOT = "master.mesos:5001"
 
 
 def main():
