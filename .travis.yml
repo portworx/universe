@@ -1,0 +1,14 @@
+sudo: required
+dist: trusty
+branches:
+  only:
+    - version-3.x-px-local-universe-travis
+script:
+  - cd docker/local-universe && make base && \
+	make DCOS_PACKAGE_INCLUDE="portworx-cassandra:1.1-3.0.14-bf399c5,portworx-confluent-kafka:1.1-4.0.0-e1b312c,portworx-couchdb:1.1-2.1.1-56b7afa,portworx-elastic:1.1-5.5.1-bf399c5,portworx-hadoop:1.1-2.6.0-bf399c5,portworx-kafka:1.1-0.11.0.1-bf399c5,portworx-zookeeper:1.1-3.4.11-56b7afa,portworx:1.1-1.2.22-24c81e4,portworx:1.1-1.2.12.0-16ecb6a,portworx:1.1-1.2.11.7-7fba8ec,portworx:1.1-1.2.11.5-b02c112,portworx:1.0-1.2.10-8e408e5,portworx:8688ecd-1.2.9" \
+    DCOS_VERSION=1.10 local-universe
+notifications:
+  email:
+    on_success: always
+    on_failure: always
+
