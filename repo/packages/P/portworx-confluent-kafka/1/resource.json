@@ -1,0 +1,60 @@
+{
+  "assets": {
+    "uris": {
+      "jre-tar-gz": "https://downloads.mesosphere.com/java/jre-8u131-linux-x64.tar.gz",
+      "libmesos-bundle-tar-gz": "https://downloads.mesosphere.io/libmesos-bundle/libmesos-bundle-1.10-1.4-63e0814.tar.gz",
+      "bootstrap-zip": "https://disrani-dcos.s3.amazonaws.com/portworx-confluent-kafka/assets/1.1-4.0.0-e1b312c/bootstrap.zip",
+      "kafka-tgz": "https://packages.confluent.io/archive/4.0/confluent-4.0.0-2.11.tar.gz",
+      "kafka-jre-tar-gz": "https://downloads.mesosphere.com/java/jre-8u131-linux-x64.tar.gz",
+      "kafka-scheduler-zip": "https://disrani-dcos.s3.amazonaws.com/portworx-confluent-kafka/assets/1.1-4.0.0-e1b312c/kafka-scheduler.zip",
+      "executor-zip": "https://disrani-dcos.s3.amazonaws.com/portworx-confluent-kafka/assets/1.1-4.0.0-e1b312c/executor.zip",
+      "kafka-statsd-jar": "http://downloads.mesosphere.com/kafka/assets/kafka-statsd-metrics2-0.5.3.jar",
+      "statsd-client-jar": "http://downloads.mesosphere.com/kafka/assets/java-dogstatsd-client-2.3.jar"
+    }
+  },
+  "images": {
+    "icon-small": "https://downloads.mesosphere.com/universe/assets/icon-service-kafka-small.png",
+    "icon-medium": "https://downloads.mesosphere.com/universe/assets/icon-service-kafka-medium.png",
+    "icon-large": "https://downloads.mesosphere.com/universe/assets/icon-service-kafka-large.png"
+  },
+  "cli": {
+    "binaries": {
+      "darwin": {
+        "x86-64": {
+          "contentHash": [
+            {
+              "algo": "sha256",
+              "value": "0bc08aeeab5d2c2e3457f99d8469781e5a77f73eb95399f07bfb5863d977737b"
+            }
+          ],
+          "kind": "executable",
+          "url": "https://disrani-dcos.s3.amazonaws.com/portworx-confluent-kafka/assets/1.1-4.0.0-e1b312c/dcos-portworx-confluent-kafka-darwin"
+        }
+      },
+      "linux": {
+        "x86-64": {
+          "contentHash": [
+            {
+              "algo": "sha256",
+              "value": "9ea4f465599a5cd2670dd91d27f4e46e9b48870617453d2c5e587fcfcb247b0e"
+            }
+          ],
+          "kind": "executable",
+          "url": "https://disrani-dcos.s3.amazonaws.com/portworx-confluent-kafka/assets/1.1-4.0.0-e1b312c/dcos-portworx-confluent-kafka-linux"
+        }
+      },
+      "windows": {
+        "x86-64": {
+          "contentHash": [
+            {
+              "algo": "sha256",
+              "value": "8afdd22e83ebc96c764cd073306d1f11763d31abe8d8559bcf69109a058aaf38"
+            }
+          ],
+          "kind": "executable",
+          "url": "https://disrani-dcos.s3.amazonaws.com/portworx-confluent-kafka/assets/1.1-4.0.0-e1b312c/dcos-portworx-confluent-kafka.exe"
+        }
+      }
+    }
+  }
+}
