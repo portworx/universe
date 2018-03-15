@@ -139,6 +139,13 @@ def main():
                     dcos_version)):
                 print("Completed: {}".format(package))
 
+        for package, version, path  in enumerate_dcos_packages(
+                    pathlib.Path(args.repository),
+                    packages,
+                    args.selected,
+                    dcos_version):
+            for name in enumerate_docker_images(path):
+                remove_docker_image(name)
         build_repository(
             pathlib.Path(
                 os.path.dirname(os.path.realpath(__file__)),
@@ -347,6 +354,13 @@ def upload_docker_image(name):
     command = ['docker', 'push', format_image_name('localhost:5001', name)]
 
     subprocess.check_call(command)
+
+
+def remove_docker_image(name):
+    command = ['docker', 'image', 'rm', name,
+               format_image_name('localhost:5001', name)]
+
+    subprocess.call(command)
 
 
 def build_universe_docker(dir_path):

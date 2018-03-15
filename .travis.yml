@@ -6,8 +6,9 @@ branches:
 before_install:
     - sudo apt-get install -y awscli python3.4-venv
 script:
+  - df -h
   - cd docker/local-universe
-  - make base && sudo make DCOS_PACKAGE_INCLUDE="portworx-cassandra:1.1-3.0.14-bf399c5,portworx-confluent-kafka:1.1-4.0.0-e1b312c,portworx-couchdb:1.1-2.1.1-56b7afa,portworx-elastic:1.1-5.5.1-bf399c5,portworx-hadoop:1.1-2.6.0-bf399c5,portworx-kafka:1.1-0.11.0.1-bf399c5,portworx-zookeeper:1.1-3.4.11-56b7afa,portworx:1.1-1.2.22-24c81e4,portworx:1.1-1.2.12.0-16ecb6a,portworx:1.1-1.2.11.7-7fba8ec,portworx:1.1-1.2.11.5-b02c112,portworx:1.0-1.2.10-8e408e5,portworx:8688ecd-1.2.9" DCOS_VERSION=1.10 local-universe
+  - make base && sudo make DCOS_PACKAGE_INCLUDE="portworx-cassandra:1.1-3.0.14-bf399c5,portworx-confluent-kafka:1.1-4.0.0-e1b312c,portworx-couchdb:1.1-2.1.1-56b7afa,portworx-elastic:1.1-5.5.1-bf399c5,portworx-hadoop:1.1-2.6.0-bf399c5,portworx-kafka:1.1-0.11.0.1-bf399c5,portworx-zookeeper:1.1-3.4.11-56b7afa,portworx:1.1-1.2.22-24c81e4,portworx:1.0-1.2.10-8e408e5" DCOS_VERSION=1.10 local-universe
   - fname="local-universe_1.10_`date +%d%m%Y`_`git rev-parse --short HEAD`.tar.gz"
   - mv local-universe.tar.gz "${fname}"
   - if [ "${TRAVIS_PULL_REQUEST}" == "false" ];
